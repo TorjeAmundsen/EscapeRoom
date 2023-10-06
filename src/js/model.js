@@ -18,8 +18,9 @@ const model = {
         },
         eastWall: {
             combinationLock: {
-                password: [1, 2, 3, 4],
+                password: [0, 1, 1, 1],
                 currentCombination: [0, 1, 1, 0],
+                isUnlocked: false,
             },
         },
         southWall: {

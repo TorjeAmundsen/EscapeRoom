@@ -1,0 +1,34 @@
+:root {
+    --text-color: hsl(0, 0%, 80%);
+    --bg-color: hsl(0, 0%, 8%);
+    --combination-lock-bg: hsl(0, 0%, 15%);
+    user-select: none;
+}
+
+body {
+    margin: 12px;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.combination-lock-container {
+    width: 15rem;
+    border: 1px solid hsl(0, 0%, 21%);
+    border-radius: 6px;
+    padding: 4px;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--combination-lock-bg);
+}
+.combination-lock-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.combination-lock-number {
+    text-align: center;
+}
