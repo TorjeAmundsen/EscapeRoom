@@ -1,6 +1,9 @@
 const model = {
     app: {
-        log: [],
+        log: [
+            { message: "this is an example message", timestamp: new Date() },
+            { message: "this is another example message", timestamp: new Date() },
+        ],
         scrollPosition: null,
     },
     player: {
@@ -12,6 +15,12 @@ const model = {
         global: {
             lightsOn: true,
             iceMelted: false,
+            radioPlaying: false,
+            radioLines: [
+                "Exampels were important in the post-Perolific era",
+                "Many creatures survived on exampels, and could therefore grow big",
+                "Now exampels have run dry, and only 3 are left",
+            ],
         },
         northWall: {
             bucketPlaced: false,
