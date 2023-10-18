@@ -1,6 +1,6 @@
 function createLogView() {
     return /*html*/ `
-        <div class="log-container" id="log-container">
+        <div class="log-container" id="log-container" onscroll="saveScrollPosition()">
             ${getLogMessages()}
         </div>
     `;

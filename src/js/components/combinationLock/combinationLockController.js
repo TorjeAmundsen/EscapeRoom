@@ -1,20 +1,15 @@
 function changeCombination(index, offset) {
     const lock = model.room.eastWall.combinationLock;
-    if (lock.isUnlocked) return;
-    lock.currentCombination[index] = cycleNum(
-        lock.currentCombination[index],
-        offset
-    );
+    lock.currentCombination[index] = cycleNum(lock.currentCombination[index], offset, 0, 9);
     checkCombination();
     updateView();
 }
 
 function checkCombination() {
     const lock = model.room.eastWall.combinationLock;
-    if (lock.isUnlocked) return;
-    const currentCombination =
-        model.room.eastWall.combinationLock.currentCombination;
+    const currentCombination = model.room.eastWall.combinationLock.currentCombination;
     for (let i = 0; i < lock.password.length; i++) {
+        //
         if (lock.password[i] !== currentCombination[i]) {
             return;
         }
@@ -23,4 +18,5 @@ function checkCombination() {
     document
         .querySelector(":root")
         .style.setProperty("--combination-lock-bg", "hsl(219, 42%, 19%)");
+    addToLog("The lock opened!");
 }

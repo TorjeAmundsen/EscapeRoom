@@ -1,43 +1,36 @@
-const app = document.getElementById("app");
-/*
-const NORTH = 0;
-const EAST = 1;
-const SOUTH = 2;
-const WEST = 3;
-*/
-
 function updateView() {
     const facingDirection = model.player.facingDirection;
     app.innerHTML = /*html*/ `
-        ${createLogView()}
         ${createWallView(facingDirection)}
-        ${createTurnButtons(facingDirection)}
-    `;
-    const log = document.getElementById("log-container");
-    log.addEventListener("scroll", saveScrollPosition);
+        ${createLogView()}
+        ${createTurnButtons()}
+        
+     `;
+    /* ${createItemImagesHTML()} */
+    scrollLogToSavedPosition();
 }
 
 function createWallView(facingDirection) {
-    if (facingDirection == NORTH) {
+    if (facingDirection === NORTH) {
         //temp message for testing
-        addToLog("Nothing to se in this direction");
+        addToLog("Nothing to see in this direction");
         return /*html*/ `
 
         `;
     }
-    if (facingDirection == "east") {
+    if (facingDirection === EAST) {
         return /*html*/ `
             ${createCombinationLock()}
         `;
     }
-    if (facingDirection == "south") {
+    if (facingDirection === SOUTH) {
         //also test message
-        addToLog(room.radioLines.shift());
+        /* addToLog(model.room.global.radioLines.shift()); */
         return /*html*/ `
             
         `;
     }
-    if (facingDirection == "west") {
+    if (facingDirection === WEST) {
         return /*html*/ `
             
         `;
@@ -46,11 +39,9 @@ function createWallView(facingDirection) {
 
 function scrollLogToSavedPosition() {
     const position = model.app.scrollPosition;
-    if (position === null) return;
     const log = document.getElementById("log-container");
-    log.scrollTo({
-        top: position,
-    });
+    log.scrollTop = position;
 }
 
+//runs updateView for the first time, when everything is ready. Less chance of crashing than just running it normaly the first time.
 document.addEventListener("DOMContentLoaded", updateView);

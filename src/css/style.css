@@ -13,6 +13,10 @@ body {
 }
 
 .combination-lock-container {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 15rem;
     border: 1px solid hsl(0, 0%, 21%);
     border-radius: 6px;
@@ -31,4 +35,50 @@ body {
 }
 .combination-lock-number {
     text-align: center;
+}
+
+.log-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 16vw;
+    height: 97vh;
+    border: 2px solid gray;
+}
+.log-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 10px hsla(224, 0%, 3%, 0.35);
+}
+.log-container::-webkit-scrollbar {
+    width: 4px;
+    background-color: hsl(216, 0%, 7%);
+}
+.log-container::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: hsl(214, 0%, 18%);
+}
+.log-message {
+    padding: 4px 4px 4px 4px;
+}
+.log-message:nth-child(odd) {
+    background-color: hsl(0, 0%, 11%);
+}
+.log-timestamp {
+    opacity: 75%;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.turn-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    width: 4rem;
+    height: 4rem;
+}
+.turn-button.right {
+    left: auto;
+    right: 5px;
 }

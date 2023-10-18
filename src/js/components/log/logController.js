@@ -8,5 +8,6 @@ function addToLog(message) {
         message: message,
         timestamp: new Date(),
     });
-    model.app.scrollPosition = null;
+    model.app.scrollPosition = document.getElementById("log-container").scrollHeight;
+    scrollLogToSavedPosition();
 }
