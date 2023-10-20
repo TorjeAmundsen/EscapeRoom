@@ -15,11 +15,12 @@ function createWallView(facingDirection) {
         //temp message for testing
         addToLog("Nothing to see in this direction");
         return /*html*/ `
-
+            <div class="placeholder-text">NORTH PLACEHOLDER</div>
         `;
     }
     if (facingDirection === EAST) {
         return /*html*/ `
+            <div class="placeholder-text">EAST PLACEHOLDER</div>
             ${createCombinationLock()}
         `;
     }
@@ -27,12 +28,12 @@ function createWallView(facingDirection) {
         //also test message
         /* addToLog(model.room.global.radioLines.shift()); */
         return /*html*/ `
-            
+            <div class="placeholder-text">SOUTH PLACEHOLDER</div>
         `;
     }
     if (facingDirection === WEST) {
         return /*html*/ `
-            
+            <div class="placeholder-text">WEST PLACEHOLDER</div>
         `;
     }
 }
