@@ -4,6 +4,7 @@ function updateView() {
         ${createWallView(facingDirection)}
         ${createLogView()}
         ${createTurnButtons()}
+        ${createItemImagesHTML()}
         
      `;
     /* ${createItemImagesHTML()} */
@@ -12,30 +13,43 @@ function updateView() {
 
 function createWallView(facingDirection) {
     if (facingDirection === NORTH) {
-        //temp message for testing
-        addToLog("Nothing to see in this direction");
-        return /*html*/ `
-            <div class="placeholder-text">NORTH PLACEHOLDER</div>
-        `;
+        return createNorthView();
     }
     if (facingDirection === EAST) {
-        return /*html*/ `
-            <div class="placeholder-text">EAST PLACEHOLDER</div>
-            ${createCombinationLock()}
-        `;
+        return createEastView();
     }
     if (facingDirection === SOUTH) {
-        //also test message
-        /* addToLog(model.room.global.radioLines.shift()); */
-        return /*html*/ `
-            <div class="placeholder-text">SOUTH PLACEHOLDER</div>
-        `;
+        return createSouthView();
     }
     if (facingDirection === WEST) {
-        return /*html*/ `
-            <div class="placeholder-text">WEST PLACEHOLDER</div>
-        `;
+        return createWestView();
     }
+}
+
+function createNorthView() {
+    return /*html*/ `
+        <div class="placeholder-text">
+            NORTH PLACEHOLDER
+            <div class="box test-right"></div>
+            <div class="box test-left"></div>
+        </div>
+    `;
+}
+function createEastView() {
+    return /*html*/ `
+        <div class="placeholder-text">EAST PLACEHOLDER</div>
+        ${createCombinationLock()}
+    `;
+}
+function createSouthView() {
+    return /*html*/ `
+        <div class="placeholder-text">SOUTH PLACEHOLDER</div>
+    `;
+}
+function createWestView() {
+    return /*html*/ `
+    <div class="placeholder-text">WEST PLACEHOLDER</div>
+`;
 }
 
 function scrollLogToSavedPosition() {

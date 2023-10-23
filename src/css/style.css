@@ -95,3 +95,27 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.box {
+    width: 8rem;
+    height: 8rem;
+    border: 2px solid black;
+    border-radius: 6px;
+    transition: 160ms;
+}
+.test-right {
+    background-color: hsl(0, 74%, 33%);
+}
+.test-right:hover {
+    box-shadow: 0 0 8px hsl(0, 100%, 62%);
+}
+.test-left {
+    height: 6rem;
+    width: 6rem;
+    margin-left: 1rem;
+    background-color: hsl(214, 72%, 42%);
+    transform: translate(25px, -100px);
+}
+.test-left:hover {
+    box-shadow: 0 0 8px hsl(214, 100%, 62%);
+}

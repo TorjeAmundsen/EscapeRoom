@@ -9,5 +9,16 @@ function changeFacingDirection(offset) {
         `You turned ${direction} and are now facing`,
         cardinals[model.player.facingDirection]
     );
+    runWallPrerequisites();
     updateView();
+}
+
+function runWallPrerequisites() {
+    if (model.player.facingDirection === NORTH) {
+        addToLog("Nothing to see in this direction");
+    } else if (model.player.facingDirection === EAST) {
+    } else if (model.player.facingDirection === SOUTH) {
+        if (model.room.global.radioLines.length) addToLog(model.room.global.radioLines.shift());
+    } else if (model.player.facingDirection === WEST) {
+    }
 }
