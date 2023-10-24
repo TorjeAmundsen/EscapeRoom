@@ -3,11 +3,17 @@
 function createItemImagesHTML() {
     let htmlString = "";
     const inventory = model.player.inventory;
-    for (const item of inventory) {
-        htmlString += /*html*/ `   
-        <img src="${item.img}" alt="${item.name}">
-
-        `; //will not show item img for some reason
+    for (let i = 0; i < inventory.length; i++) {
+        const item = inventory[i];
+        if (i == model.player.selectedItemIndex) {
+            htmlString += /*html*/ `
+                <img src="${item.img}" class=selected-item-conteiner alt="${item.name}">    
+                `;
+        } else {
+            htmlString += /*html*/ `   
+                <img src="${item.img}" alt="${item.name}" onclick="setSelectedItem(${i})">
+            `;
+        }
     }
     return htmlString;
 }

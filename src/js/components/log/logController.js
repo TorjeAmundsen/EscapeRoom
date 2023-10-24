@@ -8,6 +8,9 @@ function addToLog(message) {
         message: message,
         timestamp: new Date(),
     });
+}
+
+function scrollLogToBottom() {
     model.app.scrollPosition = document.getElementById("log-container").scrollHeight;
-    scrollLogToSavedPosition();
+    updateView();
 }

@@ -119,3 +119,9 @@ body {
 .test-left:hover {
     box-shadow: 0 0 8px hsl(214, 100%, 62%);
 }
+
+.selected-item-conteiner {
+    /* margin-left: 2px;
+    margin-right: 2px; */
+    border: 2px solid pink;
+}

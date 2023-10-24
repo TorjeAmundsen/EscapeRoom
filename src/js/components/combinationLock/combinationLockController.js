@@ -20,3 +20,9 @@ function checkCombination() {
         .style.setProperty("--combination-lock-bg", "hsl(219, 42%, 19%)");
     addToLog("The lock opened!");
 }
+
+function breakLock() {
+    addToLog("I managed to break into the combinationlock. Good they used thin plastic to make it");
+    model.room.eastWall.combinationLock.isBroken = true;
+    updateView();
+}

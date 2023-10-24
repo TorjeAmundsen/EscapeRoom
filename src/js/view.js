@@ -38,7 +38,7 @@ function createNorthView() {
 function createEastView() {
     return /*html*/ `
         <div class="placeholder-text">EAST PLACEHOLDER</div>
-        ${createCombinationLock()}
+        ${findRightCombinationLock()}
     `;
 }
 function createSouthView() {
