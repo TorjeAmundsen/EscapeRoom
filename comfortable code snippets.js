@@ -11,15 +11,18 @@ Instruksjon: Putt # foran det du ikke er konfortabl med.
     å kalle bilder fra lokalt
     å bruke ternary ( : ? ) ? = truthy, : = falsy...
     while
-    getelementsbyclass
+    getElementsByClass
     eval
     button disable
     querySelector
     return-verdier
     multiline-strings med variabler ( `example ${test} more stuff` )
     arrow-functions
-    
-    
+    array deconstructing ( let [a, b] = array )
+    object deconstructing ( let { name, age } = object )
+    spread-operator ( let newArray = [...array] )
+
+
     
     ### JS Classes
 */
