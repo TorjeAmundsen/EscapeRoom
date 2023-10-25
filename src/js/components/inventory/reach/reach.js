@@ -1,6 +1,9 @@
 function drinkRedBull() {
-    canReachHigher = true;
+    model.player.canReachHigher = true;
+    addToInventory(model.items[2]);
+    model.room.southWall.redbullShown = "";
     console.log("REDBULL GIR DEG VINGER");
+    updateView();
 }
 
 function useChair() {

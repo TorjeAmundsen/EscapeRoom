@@ -1,5 +1,5 @@
-setInterval;
-
+/* setInterval;
+ */
 function startRadio() {
     const room = model.room.global;
     room.radioPlaying = true;

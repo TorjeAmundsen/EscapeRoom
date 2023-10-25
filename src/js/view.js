@@ -44,6 +44,7 @@ function createEastView() {
 function createSouthView() {
     return /*html*/ `
         <div class="placeholder-text">SOUTH PLACEHOLDER</div>
+        ${model.room.southWall.redbullShown}
     `;
 }
 function createWestView() {

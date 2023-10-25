@@ -41,12 +41,6 @@ const model = {
                 content: "the soul of a great warrior",
                 pickupMsg: "You picked up a sword.",
             },
-            {
-                id: 2,
-                name: "RedBull",
-                img: "https://image.similarpng.com/very-thumbnail/2021/12/Red-Bull-Energy-Drink-on-transparent-background-PNG.png",
-                pickupMsg: "You picked up RedBull",
-            },
         ],
         selectedItemIndex: null,
         facingDirection: EAST,
@@ -77,9 +71,11 @@ const model = {
             finalDoor: {
                 isUnlocked: false,
             },
-        },
-        westWall: {
-            //
+            redbullShown:
+                '<img class="redbull" src="https://image.similarpng.com/very-thumbnail/2021/12/Red-Bull-Energy-Drink-on-transparent-background-PNG.png" onclick="drinkRedBull()">',
+            westWall: {
+                //
+            },
         },
     },
     items: [
@@ -95,6 +91,12 @@ const model = {
             name: "Key",
             img: "",
             pickupMsg: "You found a key! Wonder where it goes?",
+        },
+        {
+            id: 2,
+            name: "RedBull",
+            img: "https://image.similarpng.com/very-thumbnail/2021/12/Red-Bull-Energy-Drink-on-transparent-background-PNG.png",
+            pickupMsg: "You picked up RedBull",
         },
     ],
 };

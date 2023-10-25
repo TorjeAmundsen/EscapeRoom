@@ -121,7 +121,20 @@ body {
 }
 
 .selected-item-conteiner {
-    /* margin-left: 2px;
-    margin-right: 2px; */
+    height: 64px;
+    width: 64px;
     border: 2px solid pink;
+}
+
+.inventory-images {
+    height: 64px;
+    width: 64px;
+}
+
+.redbull {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    height: 50px;
+    width: 25px;
 }
