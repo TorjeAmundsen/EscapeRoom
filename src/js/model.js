@@ -65,6 +65,7 @@ const model = {
                 currentCombination: [0, 1, 1, 0],
                 isUnlocked: false,
                 isBroken: false,
+                isOpen: false,
             },
         },
         southWall: {

@@ -5,6 +5,7 @@ function startRadio() {
     room.radioPlaying = true;
 }
 
+//should play on interval if radioPlaying is true
 function playRadioLine() {
     model.app.log.push({
         message: room.radioLines.shift(),

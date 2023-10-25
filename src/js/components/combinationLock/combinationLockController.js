@@ -26,3 +26,9 @@ function breakLock() {
     model.room.eastWall.combinationLock.isBroken = true;
     updateView();
 }
+
+function openCombinationLock() {
+    addToLog("I managed to open the combinationlock. What is inside?");
+    model.room.eastWall.combinationLock.isOpen = true;
+    updateView();
+}
