@@ -26,6 +26,7 @@ const model = {
         scrollPosition: null,
     },
     player: {
+        canReachHigher: false,
         inventory: [
             {
                 id: 0,
@@ -39,6 +40,12 @@ const model = {
                 img: "https://wiki.guildwars.com/images/f/fd/Long_Sword.png",
                 content: "the soul of a great warrior",
                 pickupMsg: "You picked up a sword.",
+            },
+            {
+                id: 2,
+                name: "RedBull",
+                img: "https://image.similarpng.com/very-thumbnail/2021/12/Red-Bull-Energy-Drink-on-transparent-background-PNG.png",
+                pickupMsg: "You picked up RedBull",
             },
         ],
         selectedItemIndex: null,
@@ -67,7 +74,9 @@ const model = {
             },
         },
         southWall: {
-            //
+            finalDoor: {
+                isUnlocked: false,
+            },
         },
         westWall: {
             //
