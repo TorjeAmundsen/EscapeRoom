@@ -74,7 +74,7 @@ const model = {
                 isUnlocked: false,
             },
             redbullShown:
-                '<img class="redbull" src="https://image.similarpng.com/very-thumbnail/2021/12/Red-Bull-Energy-Drink-on-transparent-background-PNG.png" onclick="drinkRedBull()">',
+                '<img class="redbull" src="https://boozy.ph/cdn/shop/products/RedBull.png?v=1601541174" onclick="drinkRedBull()">',
             westWall: {
                 //
             },
@@ -97,7 +97,7 @@ const model = {
         {
             id: 2,
             name: "RedBull",
-            img: "https://image.similarpng.com/very-thumbnail/2021/12/Red-Bull-Energy-Drink-on-transparent-background-PNG.png",
+            img: "https://boozy.ph/cdn/shop/products/RedBull.png?v=1601541174",
             pickupMsg: "You picked up RedBull",
         },
     ],
