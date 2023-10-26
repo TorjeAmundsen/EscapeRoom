@@ -1,5 +1,9 @@
 function updateView() {
     const facingDirection = model.player.facingDirection;
+    if (model.player.hasEscaped) {
+        app.innerHTML = createEndScreen();
+        return;
+    }
     app.innerHTML = /*html*/ `
         ${createWallView(facingDirection)}
         ${createLogView()}
@@ -45,12 +49,19 @@ function createSouthView() {
     return /*html*/ `
         <div class="placeholder-text">SOUTH PLACEHOLDER</div>
         ${model.room.southWall.redbullShown}
+        ${createFinalDoorHTML()}
     `;
 }
 function createWestView() {
     return /*html*/ `
     <div class="placeholder-text">WEST PLACEHOLDER</div>
 `;
+}
+
+function createEndScreen() {
+    return /*html*/ `
+        <div class="placeholder-text">You beat the game! Placeholder</div>
+    `;
 }
 
 function scrollLogToSavedPosition() {

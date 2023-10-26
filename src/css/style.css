@@ -2,6 +2,7 @@
     --text-color: hsl(0, 0%, 80%);
     --bg-color: hsl(0, 0%, 8%);
     --combination-lock-bg: hsl(0, 0%, 15%);
+    --final-door-width: 100%;
     user-select: none;
 }
 
@@ -136,5 +137,24 @@ body {
     left: 50%;
     bottom: 50%;
     height: 50px;
-    width: 25px;
+}
+
+.final-door-wrapper {
+    position: absolute;
+    width: 6rem;
+    height: 12rem;
+    background-color: hsl(216, 0%, 7%);
+    border: 1px solid hsl(0, 0%, 15%);
+    border-radius: 4px;
+    top: 5rem;
+    right: 15rem;
+}
+.final-door-inner.unlocked {
+    height: 100%;
+    width: var(--final-door-width);
+    background-color: hsl(227, 13%, 14%);
+}
+
+.unlocked {
+    transition: width 250ms ease-out;
 }

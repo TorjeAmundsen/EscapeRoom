@@ -114,5 +114,3 @@ function createOpenCombinationLock() {
             </div>
         `;
 }
-
-console.log(lock);

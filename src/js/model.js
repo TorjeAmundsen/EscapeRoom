@@ -26,6 +26,7 @@ const model = {
         scrollPosition: null,
     },
     player: {
+        hasEscaped: false,
         canReachHigher: false,
         inventory: [
             {
