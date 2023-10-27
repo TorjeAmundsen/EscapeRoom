@@ -1,11 +1,11 @@
 function findRightCombinationLock() {
     const lock = model.room.eastWall.combinationLock;
-    if (lock.isBroken) {
+    /* if (lock.isBroken) {
         return createBrokenCombinationLock();
     }
     if (lock.isOpen) {
         return createOpenCombinationLock();
-    }
+    } */
     if (model.player.inventory[model.player.selectedItemIndex]?.name != "pickaxe") {
         console.log("not Broken and not Pickaxe");
         return createCombinationLock();
