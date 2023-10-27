@@ -15,7 +15,7 @@ body {
 
 .combination-lock-container {
     position: absolute;
-    bottom: 12px;
+    top: 12px;
     left: 50%;
     transform: translateX(-50%);
     width: 15rem;
@@ -157,4 +157,13 @@ body {
 
 .unlocked {
     transition: width 250ms ease-out;
+}
+
+.inventory-wrapper {
+    border: 2px solid gray;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
 }

@@ -15,5 +15,9 @@ function createItemImagesHTML() {
             `;
         }
     }
-    return htmlString;
+    return /*html*/ `
+        <div class="inventory-wrapper">
+            ${htmlString}
+        </div>
+    `;
 }
