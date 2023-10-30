@@ -36,9 +36,10 @@ function createCombinationLock() {
             </div>
         `;
     }
+    // <div> ᛏᛖᚱᛃᛖ </div>
     return /*html*/ `
         <div class="combination-lock-container">
-            ${innerLocks}
+        ${innerLocks}
         </div>
     `;
 }
@@ -69,7 +70,7 @@ function createBreakableCombinationLock() {
     }
     return /*html*/ `
             <div class="combination-lock-container" onclick="breakLock()">
-                ${innerLocks}
+        ${innerLocks}
             </div>
         `;
 }
@@ -89,7 +90,7 @@ function createBrokenCombinationLock() {
     }
     return /*html*/ `
             <div class="combination-lock-container">
-                ${innerLocks}${model.room.southWall.redbullShown}
+            ${innerLocks}${model.room.southWall.redbullShown}
             </div>
         `;
 }
@@ -109,7 +110,7 @@ function createOpenCombinationLock() {
     }
     return /*html*/ `
             <div class="combination-lock-container">
-                ${innerLocks} ${model.room.southWall.redbullShown}
+            ${innerLocks} ${model.room.southWall.redbullShown}
 
             </div>
         `;

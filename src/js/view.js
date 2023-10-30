@@ -37,6 +37,7 @@ function createNorthView() {
             NORTH PLACEHOLDER
             <div class="box test-right"></div>
             <div class="box test-left"></div>
+            ᛏᚺᛖ ᛏᛁᛗᛖ ᛁᛊ ᚦᛖ ᚲᛟᛞᛖ
         </div>
     `;
 }
@@ -49,14 +50,14 @@ function createEastView() {
 function createSouthView() {
     return /*html*/ `
         <div class="placeholder-text">SOUTH PLACEHOLDER</div>
-        ${model.room.southWall.redbullShown}
         ${createFinalDoorHTML()}
     `;
 }
 function createWestView() {
     return /*html*/ `
-    <div class="placeholder-text">WEST PLACEHOLDER</div>
-`;
+        <div class="placeholder-text">WEST PLACEHOLDER</div>
+        <img src="src/img/clock.png" class="clock">
+    `;
 }
 
 function createEndScreen() {

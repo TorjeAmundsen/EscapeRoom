@@ -41,13 +41,6 @@ const model = {
                 img: "https://oldschool.runescape.wiki/images/Brass_key_detail.png?82e6f",
                 pickupMsg: "You found a key! Wonder where it goes?",
             }, */
-            {
-                id: 3,
-                name: "nothing",
-                img: "",
-                content: "",
-                pickupMsg: "",
-            },
         ],
         selectedItemIndex: null,
         facingDirection: EAST,
@@ -69,8 +62,8 @@ const model = {
         },
         eastWall: {
             combinationLock: {
-                password: [0, 1, 1, 1],
-                currentCombination: [0, 1, 1, 0],
+                password: [1, 0, 4, 5], //6969
+                currentCombination: [1, 0, 4, 4],
                 isUnlocked: false,
                 isBroken: false,
                 isOpen: false,
