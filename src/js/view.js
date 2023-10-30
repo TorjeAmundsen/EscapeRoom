@@ -32,6 +32,7 @@ function createWallView(facingDirection) {
 
 function createNorthView() {
     return /*html*/ `
+        ${model.room.northWall.keyShown ? showKey() : ""}
         <div class="placeholder-text">
             NORTH PLACEHOLDER
             <div class="box test-right"></div>

@@ -35,12 +35,18 @@ const model = {
                 img: "https://minecraftitemids.com/item/64/netherite_pickaxe.png",
                 pickupMsg: "You picked up a pickaxe.",
             },
-            {
+            /* {
                 id: 1,
-                name: "sword",
-                img: "https://wiki.guildwars.com/images/f/fd/Long_Sword.png",
-                content: "the soul of a great warrior",
-                pickupMsg: "You picked up a sword.",
+                name: "Key",
+                img: "https://oldschool.runescape.wiki/images/Brass_key_detail.png?82e6f",
+                pickupMsg: "You found a key! Wonder where it goes?",
+            }, */
+            {
+                id: 3,
+                name: "nothing",
+                img: "",
+                content: "",
+                pickupMsg: "",
             },
         ],
         selectedItemIndex: null,
@@ -58,7 +64,8 @@ const model = {
             ],
         },
         northWall: {
-            bucketPlaced: false,
+            //bucketPlaced: false,
+            keyShown: true,
         },
         eastWall: {
             combinationLock: {
@@ -72,6 +79,7 @@ const model = {
         southWall: {
             finalDoor: {
                 isUnlocked: false,
+                playerHasClicked: false,
             },
             redbullShown:
                 '<img class="redbull" src="https://boozy.ph/cdn/shop/products/RedBull.png?v=1601541174" onclick="drinkRedBull()">',
@@ -83,22 +91,21 @@ const model = {
     items: [
         {
             id: 0,
-            name: "Bucket",
-            img: "",
-            content: "Empty",
-            pickupMsg: "You picked up an empty bucket.",
+            name: "pickaxe",
+            img: "https://minecraftitemids.com/item/64/netherite_pickaxe.png",
+            pickupMsg: "I picked up a pickaxe.",
         },
         {
             id: 1,
             name: "Key",
-            img: "",
-            pickupMsg: "You found a key! Wonder where it goes?",
+            img: "https://oldschool.runescape.wiki/images/Brass_key_detail.png?82e6f",
+            pickupMsg: "I found a key! Wonder where it goes?",
         },
         {
             id: 2,
             name: "RedBull",
             img: "https://boozy.ph/cdn/shop/products/RedBull.png?v=1601541174",
-            pickupMsg: "You picked up RedBull",
+            pickupMsg: "I picked up RedBull",
         },
     ],
 };

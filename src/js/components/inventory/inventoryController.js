@@ -7,6 +7,7 @@ function setSelectedItem(i) {
 
 function addToInventory(item) {
     model.player.inventory.push(item);
+    addToLog(item.pickupMsg);
     updateView();
 }
 

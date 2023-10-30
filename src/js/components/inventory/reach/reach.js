@@ -2,7 +2,7 @@ function drinkRedBull() {
     model.player.canReachHigher = true;
     addToInventory(model.items[2]);
     model.room.southWall.redbullShown = "";
-    console.log("REDBULL GIR DEG VINGER");
+    addToLog("REDBULL GIR DEG VIINGEEEEER");
     updateView();
 }
 

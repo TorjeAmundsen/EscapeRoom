@@ -8,6 +8,18 @@ function addToLog(message) {
         message: message,
         timestamp: new Date(),
     });
+    saveScrollPosition();
+    const log = document.getElementById("log-container");
+    console.log("isScrolledToBottom returns:", isScrolledToBottom(log));
+    /* if (isScrolledToBottom(log)) {
+        //
+    } */
+}
+
+function isScrolledToBottom(element) {
+    const wrapperHeight = element.getBoundingClientRect().height;
+    console.log("wrapperHeight:", wrapperHeight, "element.scrollHeight:", element.scrollHeight);
+    if (element.scrollHeight < wrapperHeight) return true;
 }
 
 function scrollLogToBottom() {

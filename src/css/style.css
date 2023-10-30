@@ -11,6 +11,7 @@ body {
     padding: 0;
     color: var(--text-color);
     background-color: var(--bg-color);
+    background-image: url("./src/img/room.png");
 }
 
 .combination-lock-container {
@@ -149,13 +150,12 @@ body {
     top: 5rem;
     right: 15rem;
 }
-.final-door-inner.unlocked {
-    height: 100%;
-    width: var(--final-door-width);
+.final-door-inner {
+    width: 100%;
     background-color: hsl(227, 13%, 14%);
 }
-
-.unlocked {
+.final-door-inner.unlocked {
+    width: var(--final-door-width);
     transition: width 250ms ease-out;
 }
 
@@ -166,4 +166,11 @@ body {
     bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.door-key {
+    position: absolute;
+    top: 50px;
+    right: 500px;
+    height: 64px;
 }

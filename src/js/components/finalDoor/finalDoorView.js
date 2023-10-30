@@ -4,14 +4,19 @@ function createFinalDoorHTML() {
             class="final-door-wrapper"
             onmouseover="animateDoorOpen()"
             onmouseout="animateDoorClose()"
-            onclick="openFinalDoor()"
+            onclick="handleDoorClick()"
         >
-            <div class="final-door-inner unlocked" ></div>
+            <div class="final-door-inner ${isFinalDoorUnlocked()}"></div>
         </div>
     `;
 }
 
+function isFinalDoorUnlocked() {
+    return model.room.southWall.finalDoor.isUnlocked ? "unlocked" : "";
+}
+
 function animateDoorOpen() {
+    if (!model.room.southWall.finalDoor.isUnlocked) return;
     const root = document.querySelector(":root");
     root.style.setProperty("--final-door-width", "65%");
 }
