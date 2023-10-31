@@ -68,6 +68,7 @@ const model = {
                 isBroken: false,
                 isOpen: false,
             },
+            runeTranslatorPickedUp: false,
         },
         southWall: {
             finalDoor: {
@@ -99,6 +100,12 @@ const model = {
             name: "RedBull",
             img: "https://boozy.ph/cdn/shop/products/RedBull.png?v=1601541174",
             pickupMsg: "I picked up RedBull",
+        },
+        {
+            id: 3,
+            name: "Rune Translator",
+            img: "src/img/sheet.png",
+            pickupMsg: "I found a weird thing with weird symbols",
         },
     ],
 };

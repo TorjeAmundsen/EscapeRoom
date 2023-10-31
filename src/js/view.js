@@ -37,7 +37,6 @@ function createNorthView() {
             NORTH PLACEHOLDER
             <div class="box test-right"></div>
             <div class="box test-left"></div>
-            ᛏᚺᛖ ᛏᛁᛗᛖ ᛁᛊ ᚦᛖ ᚲᛟᛞᛖ
         </div>
     `;
 }
@@ -45,8 +44,11 @@ function createEastView() {
     return /*html*/ `
         <div class="placeholder-text">EAST PLACEHOLDER</div>
         ${findRightCombinationLock()}
+        ${makeRuneSheet()}
+        ${!model.room.eastWall.runeTranslatorPickedUp ? createRuneTranslator() : ""}
     `;
 }
+
 function createSouthView() {
     return /*html*/ `
         <div class="placeholder-text">SOUTH PLACEHOLDER</div>
