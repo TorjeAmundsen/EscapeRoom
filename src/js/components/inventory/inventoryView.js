@@ -11,7 +11,7 @@ function createItemImagesHTML() {
                 `;
         } else {
             htmlString += /*html*/ `   
-                <img src="${item.img}" class="inventory-images" alt="${item.name}" onclick="setSelectedItem(${i}); testForTranslator()">
+                <img src="${item.img}" class="inventory-images" alt="${item.name}" onclick="setSelectedItem(${i}); testForTranslator();">
             `;
         }
     }

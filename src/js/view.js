@@ -33,32 +33,32 @@ function createWallView(facingDirection) {
 function createNorthView() {
     return /*html*/ `
         ${model.room.northWall.keyShown ? showKey() : ""}
-        <div class="placeholder-text">
-            NORTH PLACEHOLDER
-            <div class="box test-right"></div>
-            <div class="box test-left"></div>
-        </div>
+        ${model.player.looksAtTranslator ? createForgroundSheet() : ""}
+
     `;
 }
 function createEastView() {
     return /*html*/ `
-        <div class="placeholder-text">EAST PLACEHOLDER</div>
-        ${findRightCombinationLock()}
-        ${makeRuneSheet()}
+        <div class="safe">${findRightCombinationLock()}</div>
         ${!model.room.eastWall.runeTranslatorPickedUp ? createRuneTranslator() : ""}
+        ${model.player.looksAtTranslator ? createForgroundSheet() : ""}
     `;
+    s;
 }
 
 function createSouthView() {
     return /*html*/ `
-        <div class="placeholder-text">SOUTH PLACEHOLDER</div>
         ${createFinalDoorHTML()}
+        ${makeRuneSheet()}
+        ${model.player.looksAtTranslator ? createForgroundSheet() : ""}
+
     `;
 }
 function createWestView() {
     return /*html*/ `
-        <div class="placeholder-text">WEST PLACEHOLDER</div>
         <img src="src/img/clock.png" class="clock">
+        ${model.player.looksAtTranslator ? createForgroundSheet() : ""}
+
     `;
 }
 

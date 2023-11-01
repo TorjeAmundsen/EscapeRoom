@@ -5,5 +5,8 @@ function getRuneTranslator() {
 }
 
 function testForTranslator() {
-    console.log("there should be a test running when we have made it");
+    if (model.player.inventory[model.player.selectedItemIndex].id === 3) {
+        model.player.looksAtTranslator = true;
+    }
+    updateView();
 }

@@ -76,41 +76,17 @@ function createBreakableCombinationLock() {
 }
 
 function createBrokenCombinationLock() {
-    let innerLocks = "";
-    for (let i = 0; i < 4; i++) {
-        innerLocks += /*html*/ `
-                <div class="combination-lock-inner">
-                    <div>M</div>
-                    <div class="combination-lock-number">
-                    H
-                    </div>
-                    <div>W</div>
-                </div>
-            `;
-    }
     return /*html*/ `
             <div class="combination-lock-container">
-            ${innerLocks}${model.room.southWall.redbullShown}
+            ${model.room.southWall.redbullShown}
             </div>
         `;
 }
 
 function createOpenCombinationLock() {
-    let innerLocks = "";
-    for (let i = 0; i < 4; i++) {
-        innerLocks += /*html*/ `
-                <div class="combination-lock-inner">
-                <div>R</div>
-                    <div class="combination-lock-number">
-                    E
-                    </div>
-                    <div>D</div>
-                </div>
-            `;
-    }
     return /*html*/ `
             <div class="combination-lock-container">
-            ${innerLocks} ${model.room.southWall.redbullShown}
+            ${model.room.southWall.redbullShown}
 
             </div>
         `;

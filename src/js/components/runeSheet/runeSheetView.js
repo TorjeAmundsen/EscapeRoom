@@ -3,13 +3,13 @@ function makeRuneSheet() {
     if (!playerHasItem(3)) {
         return /*html*/ `
             <div class="hidden-runes">
-                ᚺᛖᛚᛚᛟ × ᛗᛁᛞᚷᚨᚱᛞ
+            ᛚᛖᛏ ᛏᛁᛗᛖ ᛏᛖᛚᛚ
             </div>
         `;
     } else {
         return /*html*/ `
             <div class="rune-sheet">
-                ᚺᛖᛚᛚᛟ × ᛗᛁᛞᚷᚨᚱᛞ
+            ᛚᛖᛏ ᛏᛁᛗᛖ ᛏᛖᛚᛚ
             </div>
         `;
     }
