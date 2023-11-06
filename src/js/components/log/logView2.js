@@ -1,8 +1,10 @@
 function createLogView() {
     return /*html*/ `
         <div class="log-container" id="log-container" onscroll="saveScrollPosition()">
-            ${getLogMessages()}
-            ${hasUnreadMessages() ? createUnreadMessagesIndicator() : ""}
+            <div class="log-messages-wrapper">
+                ${getLogMessages()}
+            </div>
+            ${model.app.hasUnreadMessages ? createUnreadMessagesIndicator() : ""}
         </div>
     `;
 }
@@ -20,15 +22,9 @@ function getLogMessages() {
 }
 
 function createUnreadMessagesIndicator() {
-    const unreadMessages = model.app.lastReadIndex - model.app.log.length;
     return /*html*/ `
-        <div class="log-new-message-wrapper" onclick="scrollLogToBottom()">
-            Unread messages: <span class="log-unread-messages">${unreadMessages}</span>
+        <div class="log-new-message-wrapper" onclick="scrollLogToBottom(true)">
+            Unread messages below!
         </div>
     `;
-}
-
-function hasUnreadMessages() {
-    if (model.app.log.length > model.app.lastReadIndex) return true;
-    return false;
 }

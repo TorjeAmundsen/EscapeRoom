@@ -51,14 +51,11 @@ function createSouthView() {
         ${createFinalDoorHTML()}
         ${makeRuneSheet()}
         ${model.player.looksAtTranslator ? createForgroundSheet() : ""}
-
     `;
 }
 function createWestView() {
     return /*html*/ `
-        <img src="src/img/clock.png" class="clock">
         ${model.player.looksAtTranslator ? createForgroundSheet() : ""}
-
     `;
 }
 
@@ -66,12 +63,6 @@ function createEndScreen() {
     return /*html*/ `
         <div class="placeholder-text">You beat the game! Placeholder</div>
     `;
-}
-
-function scrollLogToSavedPosition() {
-    const position = model.app.scrollPosition;
-    const log = document.getElementById("log-container");
-    log.scrollTop = position;
 }
 
 //runs updateView for the first time, when everything is ready. Less chance of crashing than just running it normaly the first time.

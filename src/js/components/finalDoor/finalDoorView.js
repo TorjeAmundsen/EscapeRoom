@@ -6,7 +6,8 @@ function createFinalDoorHTML() {
             onmouseout="animateDoorClose()"
             onclick="handleDoorClick()"
         >
-            <div class="final-door-inner ${isFinalDoorUnlocked()}"></div>
+            <div class="final-door-inner ${isFinalDoorUnlocked()}">
+            </div>
         </div>
     `;
 }

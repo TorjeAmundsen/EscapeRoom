@@ -14,27 +14,26 @@ const LEFT = -1;
 const model = {
     app: {
         log: [
-            { message: "this is an example message", timestamp: new Date() },
-            { message: "this is another example message", timestamp: new Date() },
             {
                 message:
-                    "this is another example message, this one is pretty long just so i can see how the text wraps in the log container and how it handles new lines lalalala wee woo fii foo fum 123 123",
+                    "...Why did I wake up here? Last thing I remember was eating at GET Academy in Larvik...",
                 timestamp: new Date(),
             },
         ],
-        lastReadIndex: 0,
+        hasUnreadMessages: false,
         scrollPosition: null,
+        isScrolledToBottom: true,
     },
     player: {
         hasEscaped: false,
         canReachHigher: false,
         inventory: [
-            {
+            /*             {
                 id: 0,
                 name: "pickaxe",
                 img: "https://minecraftitemids.com/item/64/netherite_pickaxe.png",
                 pickupMsg: "You picked up a pickaxe.",
-            },
+            }, */
             /* {
                 id: 1,
                 name: "Key",
@@ -63,7 +62,7 @@ const model = {
         eastWall: {
             combinationLock: {
                 password: [1, 0, 4, 5], //6969
-                currentCombination: [1, 0, 4, 4],
+                currentCombination: [1, 1, 5, 2],
                 isUnlocked: false,
                 isBroken: false,
                 isOpen: false,
