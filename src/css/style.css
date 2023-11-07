@@ -4,6 +4,7 @@
     --combination-lock-bg: hsl(0, 0%, 15%);
     --final-door-width: 100%;
     --room-image: url("../img/room1.png");
+    --blur-timer: 0s;
     user-select: none;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -15,6 +16,16 @@ body {
     background-color: var(--bg-color);
 }
 
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url("../img/room0.png") url("../img/room1.png") url("../img/room2.png")
+        url("../img/room3.png");
+}
+
 #app {
     background-image: var(--room-image);
     background-size: cover;
@@ -22,6 +33,7 @@ body {
 }
 
 .combination-lock-container {
+    backdrop-filter: blur(4px);
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -48,6 +60,7 @@ body {
 }
 
 .log-container {
+    z-index: 2;
     background-color: var(--bg-color);
     overflow-x: hidden;
     overflow-y: auto;
@@ -66,6 +79,8 @@ body {
     bottom: 2.5%;
     padding: 5px;
     background-color: hsl(214, 72%, 42%);
+    border: 2px solid hsl(214, 86%, 67%);
+    border-radius: 12px;
 }
 .log-container::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 10px hsla(224, 0%, 3%, 0.35);
@@ -86,21 +101,24 @@ body {
 }
 .log-timestamp {
     opacity: 75%;
-    margin-right: 2px;
-    margin-left: 2px;
+    margin-right: 3px;
+    margin-left: 3px;
 }
 
 .turn-button {
+    z-index: 2;
+    transition: 120ms;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 5px;
+    left: 16.35%;
     border-radius: 6px;
     border: none;
     outline: none;
     width: 3rem;
     height: 3rem;
     font-size: 1.5rem;
+    box-shadow: 2px 2px 6px hsla(0, 0%, 0%, 0.4);
 }
 .turn-button.right {
     left: auto;
@@ -238,3 +256,26 @@ body {
     margin-top: 500px;
     right: 100px;
 }
+
+.blur-backdrop {
+    z-index: 1;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 98.75vw;
+    height: 97.4vh;
+    animation: blurAnimation var(--blur-timer) ease-out;
+    pointer-events: none;
+}
+
+@keyframes blurAnimation {
+    0% {
+        backdrop-filter: blur(3px);
+    }
+    100% {
+        backdrop-filter: blur(0px);
+    }
+}
+/* {
+    filter: blur(3.5px);
+  } */

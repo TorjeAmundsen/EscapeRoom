@@ -5,10 +5,15 @@ function updateView() {
         return;
     }
     app.innerHTML = /*html*/ `
-        ${createWallView(facingDirection)}
+        
         ${createLogView()}
         ${createTurnButtons()}
-        ${createItemImagesHTML()}
+        <div class="blur-backdrop"></div>
+        <div class="blur-container">
+            ${createWallView(facingDirection)}
+            ${createItemImagesHTML()}
+        </div>
+       
         
      `;
     /* ${createItemImagesHTML()} */
@@ -43,7 +48,6 @@ function createEastView() {
         ${!model.room.eastWall.runeTranslatorPickedUp ? createRuneTranslator() : ""}
         ${model.player.looksAtTranslator ? createForgroundSheet() : ""}
     `;
-    s;
 }
 
 function createSouthView() {
