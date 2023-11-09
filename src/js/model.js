@@ -98,13 +98,13 @@ const model = {
             id: 2,
             name: "RedBull",
             img: "https://boozy.ph/cdn/shop/products/RedBull.png?v=1601541174",
-            pickupMsg: "I picked up RedBull",
+            pickupMsg: "I picked up a Red Bull.",
         },
         {
             id: 3,
             name: "Rune Translator",
             img: "src/img/sheet.png",
-            pickupMsg: "I found a weird thing with weird symbols",
+            pickupMsg: "I found a weird thing with weird symbols.",
         },
     ],
 };

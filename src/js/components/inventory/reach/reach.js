@@ -2,7 +2,7 @@ function drinkRedBull() {
     model.player.canReachHigher = true;
     addToInventory(model.items[2]);
     model.room.southWall.redbullShown = "";
-    addToLog("REDBULL GIR DEG VIINGEEEEER");
+    addToLog("Red Bull gives you wings!");
     updateView();
 }
 
@@ -12,5 +12,5 @@ function useChair() {
 
 function loseurWings() {
     canReachHigher = false;
-    console.log("You have lost you're wings");
+    console.log("Your wings disappeared...");
 }

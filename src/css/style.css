@@ -45,9 +45,13 @@ body::after {
     padding: 4px;
     display: flex;
     gap: 1rem;
+    line-height: 1.5;
     justify-content: space-around;
     align-items: center;
     background-color: var(--combination-lock-bg);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
 }
 .combination-lock-inner {
     display: flex;
@@ -111,18 +115,22 @@ body::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 16.35%;
+    left: 17.2%;
     border-radius: 6px;
     border: none;
     outline: none;
     width: 3rem;
     height: 3rem;
     font-size: 1.5rem;
-    box-shadow: 2px 2px 6px hsla(0, 0%, 0%, 0.4);
+    box-shadow: 0px 0px 6px hsla(0, 0%, 0%, 0.6);
 }
 .turn-button.right {
     left: auto;
-    right: 5px;
+    right: 20px;
+}
+
+.turn-button:hover {
+    box-shadow: 0px 0px 10px hsla(198, 57%, 37%, 0.8);
 }
 
 .placeholder-text {
@@ -250,11 +258,12 @@ body::after {
 
 .forground-sheet {
     position: absolute;
-    width: 40%;
+    width: 35%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 500px;
-    right: 100px;
+    right: 70px;
+    top: 0px;
 }
 
 .blur-backdrop {
